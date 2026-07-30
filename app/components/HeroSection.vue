@@ -8,7 +8,7 @@
             <svg class="underline-svg" viewBox="0 0 300 16" preserveAspectRatio="none"><path d="M2 10 C 60 2, 240 2, 298 9" stroke="#FFD93D" stroke-width="10" fill="none" stroke-linecap="round"/></svg>
           </span> Naik Level.
         </h1>
-        <p class="lede reveal">Dari yang bingung mau ikut UKM apa, sampai yang deg-degan mikirin dunia kerja abis wisuda — di sini kamu nggak jalan sendirian. Ada circle, mentor, dan project bareng.</p>
+        <p class="lede reveal">Dari yang bingung mau ikut UKM apa, sampai yang deg-degan mikirin dunia kerja abis wisuda, di sini kamu nggak jalan sendirian. Ada circle, mentor, dan project bareng.</p>
         <div class="hero-ctas reveal">
           <a href="#join" class="btn btn-primary">Gabung, Gratis Kok</a>
           <a href="#about" class="btn btn-ghost">Kenalan Dulu</a>
@@ -29,7 +29,7 @@
         <div class="bubble left">Kak, gue bingung mau develop diri mulai dari mana... 😭</div>
         <div class="bubble right">Santai. Di RuangImprove ada squad bareng temen seangkatan + mentor yang udah ngejalanin duluan.</div>
         <div class="bubble left">Mentornya kating doang kan, kak?</div>
-        <div class="bubble right alt">Nah, ini bedanya — mentor kita udah magang & kerja di startup/korporat, plus alumni pemenang kompetisi nasional. Real talk, bukan teori doang.</div>
+        <div class="bubble right alt">Nah, ini bedanya. Ada aja mentor kita yang udah lulus dan kerja, tapi mereka juga masih terus belajar kok kayak kita. Jadi ngobrolnya bareng-bareng, real talk, bukan digurui.</div>
       </div>
     </div>
   </section>

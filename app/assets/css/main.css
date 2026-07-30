@@ -151,6 +151,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:18px 3
   background:#fff; border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow-lift);
   padding:26px; position:relative;
 }
+.desk-card img{width:100%; height:auto; display:block; border-radius:10px;}
 .kicker-line{color:var(--violet); font-weight:800; }
 .about-copy .lead-highlight{
   font-weight:700; color:var(--ink); background:linear-gradient(transparent 68%, var(--highlighter) 68%);
