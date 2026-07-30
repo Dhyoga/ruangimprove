@@ -225,7 +225,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:18px 3
   display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:center;
 }
 .testi-mark{font-family:'Fraunces',serif; font-size:80px; line-height:.6; color:var(--highlighter);}
-.testi p.quote{font-family:'Fraunces',serif; font-size:clamp(20px,2.6vw,26px); font-style:italic; font-weight:500; margin-bottom:18px; line-height:1.4;}
+.testi p.quote{font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(20px,2.6vw,26px); font-style:italic; font-weight:500; margin-bottom:18px; line-height:1.4;}
 .testi .who{font-size:14px; color:#E4E1FC; font-weight:600;}
 .testi .who b{color:#fff;}
 
