@@ -2,7 +2,7 @@
   <div class="quiz-page">
     <div class="quiz-app">
       <div class="quiz-header">
-        <NuxtLink to="/id" class="quiz-logo-link">
+        <NuxtLink :to="`/${locale.value}`" class="quiz-logo-link">
           <img src="/RI1.png" alt="RuangImprove" class="logo-img" height="28" />
         </NuxtLink>
       </div>
@@ -80,13 +80,7 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
-const locale = computed(() => {
-  const l = route.params.locale as string
-  return ['id', 'en'].includes(l) ? l : 'id'
-})
-
-const { t } = useI18n()
+const { locale, t } = useI18n()
 const { quizData, computeResult } = await import('~/data/quiz')
 
 const data = computed(() => quizData[locale.value] || quizData.id)
@@ -141,8 +135,22 @@ async function submitResult() {
   const resultKey = winnerKeys.join('-')
 
   try {
-    await $fetch('/api/quiz/founder-test/submit', {
+    const config = useRuntimeConfig()
+    const supabaseUrl = config.public.supabaseUrl as string | undefined
+    const supabaseAnonKey = config.public.supabaseAnonKey as string | undefined
+
+    if (!supabaseUrl || !supabaseAnonKey) {
+      return
+    }
+
+    await $fetch(`${supabaseUrl}/rest/v1/quiz_submissions`, {
       method: 'POST',
+      headers: {
+        'apikey': supabaseAnonKey,
+        'Authorization': `Bearer ${supabaseAnonKey}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=representation'
+      },
       body: {
         name: name.value,
         email: email.value,

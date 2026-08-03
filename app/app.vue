@@ -14,4 +14,10 @@ useHead({
 onMounted(() => {
   useRevealOnScroll()
 })
+
+watch(() => route.fullPath, () => {
+  nextTick(() => {
+    useRevealOnScroll()
+  })
+})
 </script>

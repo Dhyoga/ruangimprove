@@ -9,10 +9,32 @@ const messages = {
 export function useI18n() {
   const route = useRoute()
 
-  const locale = computed(() => {
+  const locale = ref('id')
+  const ready = ref(false)
+
+  // Set locale immediately from route params so SSR and first paint have the right value
+  const routeLocale = route.params.locale as string
+  if (['id', 'en'].includes(routeLocale)) {
+    locale.value = routeLocale
+  }
+  ready.value = true
+
+  onMounted(() => {
     const routeLocale = route.params.locale as string
-    return ['id', 'en'].includes(routeLocale) ? routeLocale : 'id'
+    if (['id', 'en'].includes(routeLocale)) {
+      locale.value = routeLocale
+    }
+    ready.value = true
   })
+
+  watch(
+    () => route.params.locale,
+    (newLocale) => {
+      if (['id', 'en'].includes(newLocale as string)) {
+        locale.value = newLocale as string
+      }
+    }
+  )
 
   const t = (key: string, replacements?: Record<string, string>) => {
     const keys = key.split('.')
@@ -39,6 +61,7 @@ export function useI18n() {
 
   return {
     locale,
+    ready,
     t,
     setLocale
   }

@@ -14,7 +14,14 @@ export function useRevealOnScroll() {
     const elements = document.querySelectorAll('.reveal')
     elements.forEach((el, i) => {
       ;(el as HTMLElement).style.transitionDelay = `${(i % 4) * 0.06}s`
-      io.observe(el)
+      
+      // Immediately show elements that are already in the viewport to avoid blank flashes
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('in')
+      } else {
+        io.observe(el)
+      }
     })
   })
 }

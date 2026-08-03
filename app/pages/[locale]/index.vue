@@ -11,8 +11,7 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
-const locale = computed(() => route.params.locale as string)
+const { locale } = useI18n()
 
 useHead({
   htmlAttrs: { lang: locale.value },

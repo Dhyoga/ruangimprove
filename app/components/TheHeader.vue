@@ -1,14 +1,17 @@
 <template>
   <header>
     <nav>
-      <img src="/RI1.png" :alt="t('header.logoAlt')" class="logo-img" height="36" />
+      <NuxtLink :to="`/${locale.value}`">
+        <img src="/RI1.png" :alt="t('header.logoAlt')" class="logo-img" height="36" />
+      </NuxtLink>
       <ul class="nav-links">
-        <li><a href="#programs">{{ t('header.program') }}</a></li>
-        <li><a href="#about" class="active">{{ t('header.about') }}</a></li>
-        <li><a href="#journey">{{ t('header.journey') }}</a></li>
+        <li><a :href="navHref('#programs')">{{ t('header.program') }}</a></li>
+        <li><a :href="navHref('#about')" class="active">{{ t('header.about') }}</a></li>
+        <li><a :href="navHref('#journey')">{{ t('header.journey') }}</a></li>
+        <li><a :href="`/${locale.value}/quiz/founder-test`">Quiz</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="#join" class="btn btn-primary btn-sm">{{ t('header.joinCircle') }}</a>
+        <a :href="navHref('#join')" class="btn btn-primary btn-sm">{{ t('header.joinCircle') }}</a>
         <button @click="toggleLocale" class="lang-btn" type="button">
           {{ t('header.switchTo') }}
         </button>
@@ -20,7 +23,14 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 const route = useRoute()
-const router = useRouter()
+
+const isQuizPage = computed(() => route.path.includes('/quiz/'))
+const navHref = (hash: string) => {
+  if (isQuizPage.value) {
+    return `/${locale.value}${hash}`
+  }
+  return hash
+}
 
 const toggleLocale = () => {
   const newLocale = locale.value === 'id' ? 'en' : 'id'
