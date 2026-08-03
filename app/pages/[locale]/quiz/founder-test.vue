@@ -135,22 +135,8 @@ async function submitResult() {
   const resultKey = winnerKeys.join('-')
 
   try {
-    const config = useRuntimeConfig()
-    const supabaseUrl = config.public.supabaseUrl as string | undefined
-    const supabaseAnonKey = config.public.supabaseAnonKey as string | undefined
-
-    if (!supabaseUrl || !supabaseAnonKey) {
-      return
-    }
-
-    await $fetch(`${supabaseUrl}/rest/v1/quiz_submissions`, {
+    await $fetch('/api/quiz/founder-test/submit', {
       method: 'POST',
-      headers: {
-        'apikey': supabaseAnonKey,
-        'Authorization': `Bearer ${supabaseAnonKey}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=representation'
-      },
       body: {
         name: name.value,
         email: email.value,
