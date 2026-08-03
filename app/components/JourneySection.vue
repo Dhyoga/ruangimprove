@@ -25,29 +25,29 @@
 <script setup lang="ts">
 const milestones = [
   {
-    date: 'Maret 2024',
-    title: 'Mulai dari Grup WhatsApp',
-    desc: '20 mahasiswa random ikutan curhat bareng — ternyata semua ngerasain hal yang sama.'
+    date: 'Jan 2026',
+    title: 'Mulai dari WA',
+    desc: 'Berkumpulnya 20 mahasiswa random curhat bareng.'
   },
   {
-    date: 'Juni 2024',
-    title: 'Sharing Session Pertama',
-    desc: 'Ngundang kating yang udah kerja di startup buat cerita jujur soal dunia kerja.'
+    date: 'Mar 2026',
+    title: 'Sharing Pertama',
+    desc: 'Ngundang kating dan relasi cerita dunia setelah kuliah.'
   },
   {
-    date: 'Agustus 2024',
-    title: 'Squad Angkatan Pertama',
-    desc: '15 mahasiswa gabung program mentoring 8 minggu, bikin project bareng dari nol.'
+    date: 'Mei 2026',
+    title: 'Squad Angkatan 1',
+    desc: '15 mahasiswa ikut mentoring, diskusi, badminton 8 minggu.'
   },
   {
-    date: 'November 2024',
-    title: 'Kolaborasi Sama BEM & UKM',
-    desc: 'Ruang belajar kita mulai nyambung ke organisasi kampus lain se-Indonesia.'
+    date: 'Jul 2026',
+    title: 'Konsolidasi',
+    desc: 'Komitmen bersama membangun wadah mahasiswa.'
   },
   {
-    date: '5 Januari 2025',
-    title: 'RuangImprove Resmi Jadi Komunitas',
-    desc: 'Legit jadi wadah nasional buat mahasiswa yang pengen naik level bareng-bareng.'
+    date: 'Agu 2026',
+    title: 'Komunitas Berdiri',
+    desc: 'Resmi jadi wadah komunitas mahasiswa.'
   }
 ]
 </script>

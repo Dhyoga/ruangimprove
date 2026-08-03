@@ -56,7 +56,7 @@
   },
   "quiz": {
     "eyebrow": "Quiz · 45 detik",
-    "introTitle": "Kamu Jenis Pendiri yang Mana?",
+    "introTitle": "Kamu Jenis Founder yang Mana?",
     "introSub": "Jawab 7 pertanyaan singkat dan cari tahu apakah kamu seorang Hacker, Hipster, atau Hustler.",
     "start": "Mulai",
     "nameEmailTitle": "Siapa nama dan email kamu?",
@@ -67,7 +67,7 @@
     "resultTitle": "Hasil Kamu",
     "resultYouAre": "Kamu adalah {title}!",
     "resultHybrid": "Kamu tipe campuran: {types}",
-    "shareText": "Saya adalah {title}! Jenis pendiri apa kamu?",
+    "shareText": "Saya adalah {title}! Jenis founder apa kamu?",
     "hacker": {
       "title": "Hacker",
       "desc": "Hacker mengembangkan teknologi baru untuk bisnis, membuat prototipe produk, dan bekerja pada pengembangan produk."
