@@ -1,10 +1,15 @@
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient({
+  datasources: { db: { url: process.env.NUXT_DATABASE_URL || process.env.DATABASE_URL || '' } },
+})
+
 export default defineEventHandler(async (event) => {
-  const databaseUrl = process.env.NUXT_DATABASE_URL
+  const databaseUrl = process.env.NUXT_DATABASE_URL || process.env.DATABASE_URL
   if (!databaseUrl) {
     return { success: false, message: 'Database configuration is missing' }
   }
 
-  let client: import('pg').Client | null = null
   try {
     const body = await readBody(event)
     const { name, email, result, answers, locale } = body as {
@@ -19,41 +24,20 @@ export default defineEventHandler(async (event) => {
       return { success: false, message: 'Missing required fields' }
     }
 
-    const { Client } = await import('pg')
-    client = new Client({ connectionString: databaseUrl })
-    await client.connect()
+    const record = await prisma.quizSubmission.create({
+      data: {
+        name,
+        email,
+        result,
+        answers,
+        locale,
+      },
+      select: { id: true },
+    })
 
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS quiz_submissions (
-        id SERIAL PRIMARY KEY,
-        name TEXT NOT NULL,
-        email TEXT NOT NULL,
-        result TEXT NOT NULL,
-        answers JSONB NOT NULL,
-        locale TEXT NOT NULL,
-        created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-      )
-    `)
-
-    const insertQuery = `
-      INSERT INTO quiz_submissions (name, email, result, answers, locale)
-      VALUES ($1, $2, $3, $4, $5)
-      RETURNING id
-    `
-    const values = [name, email, result, answers, locale]
-    const insertResult = await client.query(insertQuery, values)
-
-    return { success: true, id: insertResult.rows[0].id }
+    return { success: true, id: record.id }
   } catch (error) {
     console.error('[quiz/submit] Failed to submit quiz:', error)
     return { success: false, message: 'Failed to submit quiz' }
-  } finally {
-    if (client) {
-      try {
-        await client.end()
-      } catch {
-        // ignore cleanup errors
-      }
-    }
   }
 })

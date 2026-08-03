@@ -1,29 +1,4 @@
 export default defineNitroPlugin(async () => {
-  if (import.meta.server) {
-    const databaseUrl = process.env.NUXT_DATABASE_URL
-    if (!databaseUrl) return
-
-    try {
-      const { Client } = await import('pg')
-      const client = new Client({ connectionString: databaseUrl })
-      await client.connect()
-
-      await client.query(`
-        CREATE TABLE IF NOT EXISTS quiz_submissions (
-          id SERIAL PRIMARY KEY,
-          name TEXT NOT NULL,
-          email TEXT NOT NULL,
-          result TEXT NOT NULL,
-          answers JSONB NOT NULL,
-          locale TEXT NOT NULL,
-          created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-        )
-      `)
-
-      await client.end()
-    } catch (error) {
-      console.warn('[db-init] Failed to auto-create quiz_submissions table:', error)
-      // ignore startup migration errors; API route will retry on submit
-    }
-  }
+  // Database schema is now managed via Prisma migrations.
+  // Run `npx prisma migrate deploy` (or apply `prisma/migrations/*.sql`) against your Supabase database to keep schema in sync.
 })
