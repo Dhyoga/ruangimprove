@@ -8,7 +8,7 @@
         <li><a :href="navHref('#programs')">{{ t('header.program') }}</a></li>
         <li><a :href="navHref('#about')" class="active">{{ t('header.about') }}</a></li>
         <li><a :href="navHref('#journey')">{{ t('header.journey') }}</a></li>
-        <li><a :href="`/${locale.value}/quiz/founder-test`">Quiz</a></li>
+        <li><a href="/quiz/founder-test">Quiz</a></li>
       </ul>
       <div class="nav-actions">
         <a :href="navHref('#join')" class="btn btn-primary btn-sm">{{ t('header.joinCircle') }}</a>
