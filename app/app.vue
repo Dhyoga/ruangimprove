@@ -7,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute()
+
 useHead({
   title: 'RuangImprove — Ruang Buat Kamu Naik Level'
 })
