@@ -1,13 +1,51 @@
 <template>
   <header>
     <nav>
-      <img src="/RI1.png" alt="RuangImprove" class="logo-img" height="36" />
+      <img src="/RI1.png" :alt="t('header.logoAlt')" class="logo-img" height="36" />
       <ul class="nav-links">
-        <li><a href="#programs">Program</a></li>
-        <li><a href="#about" class="active">Tentang Kami</a></li>
-        <li><a href="#journey">Perjalanan</a></li>
+        <li><a href="#programs">{{ t('header.program') }}</a></li>
+        <li><a href="#about" class="active">{{ t('header.about') }}</a></li>
+        <li><a href="#journey">{{ t('header.journey') }}</a></li>
       </ul>
-      <a href="#join" class="btn btn-primary btn-sm">Gabung Circle</a>
+      <div class="nav-actions">
+        <a href="#join" class="btn btn-primary btn-sm">{{ t('header.joinCircle') }}</a>
+        <button @click="toggleLocale" class="lang-btn" type="button">
+          {{ t('header.switchTo') }}
+        </button>
+      </div>
     </nav>
   </header>
 </template>
+
+<script setup lang="ts">
+const { t, locale } = useI18n()
+const route = useRoute()
+const router = useRouter()
+
+const toggleLocale = () => {
+  const newLocale = locale.value === 'id' ? 'en' : 'id'
+  const currentPath = route.path
+  const pathWithoutLocale = currentPath.replace(/^\/(id|en)/, '') || '/'
+  navigateTo(`/${newLocale}${pathWithoutLocale}`)
+}
+</script>
+
+<style scoped>
+.lang-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--accent, #5b3df5);
+  background: transparent;
+  color: var(--accent, #5b3df5);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+</style>

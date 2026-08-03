@@ -2,28 +2,30 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow reveal">Coworking Space Mahasiswa</span>
+        <span class="eyebrow reveal">{{ t('hero.eyebrow') }}</span>
         <h1 class="reveal">
-          <span class="accent">Ruang Buat Kamu
+          <span class="accent">
+            {{ t('hero.title').split('Naik Level.')[0] }}
             <svg class="underline-svg" viewBox="0 0 300 16" preserveAspectRatio="none"><path d="M2 10 C 60 2, 240 2, 298 9" stroke="#FFD93D" stroke-width="10" fill="none" stroke-linecap="round"/></svg>
-          </span> Naik Level.
+          </span>
+          Naik Level.
         </h1>
-        <p class="lede reveal">Dari yang bingung mau ikut UKM apa, sampai yang deg-degan mikirin dunia kerja abis wisuda, di sini kamu nggak jalan sendirian. Ada circle, mentor, dan project bareng.</p>
+        <p class="lede reveal">{{ t('hero.lede') }}</p>
         <div class="hero-ctas reveal">
-          <a href="#join" class="btn btn-primary">Gabung, Gratis Kok</a>
-          <a href="#about" class="btn btn-ghost">Kenalan Dulu</a>
+          <a href="#join" class="btn btn-primary">{{ t('hero.cta1') }}</a>
+          <a href="#about" class="btn btn-ghost">{{ t('hero.cta2') }}</a>
         </div>
         <div class="hero-proof reveal d-none" style="display: none;">
           <div class="avatars">
             <span>A</span><span>R</span><span>D</span><span>+</span>
           </div>
-          <span>Udah 1.200+ mahasiswa yang mulai duluan</span>
+          <span>{{ t('hero.proof') }}</span>
         </div>
       </div>
 
       <div class="chat-card reveal">
         <div class="chat-head">
-          <span class="chat-title">Circle Chat — Angkatan 2026</span>
+          <span class="chat-title">{{ t('hero.chatTitle') }}</span>
           <span class="status">Online</span>
         </div>
         <div class="bubble left">Kak, gue bingung mau develop diri mulai dari mana... 😭</div>
@@ -34,3 +36,11 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+  locale: string
+}>()
+
+const { t } = useI18n()
+</script>

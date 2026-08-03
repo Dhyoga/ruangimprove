@@ -1,0 +1,84 @@
+{
+  "site": {
+    "title": "RuangImprove — Ruang Buat Kamu Naik Level",
+    "lang": "id"
+  },
+  "header": {
+    "logoAlt": "RuangImprove",
+    "program": "Program",
+    "about": "Tentang Kami",
+    "journey": "Perjalanan",
+    "joinCircle": "Gabung Circle",
+    "switchTo": "EN"
+  },
+  "hero": {
+    "eyebrow": "Coworking Space Mahasiswa",
+    "title": "Ruang Buat Kamu Naik Level.",
+    "lede": "Dari yang bingung mau ikut UKM apa, sampai yang deg-degan mikirin dunia kerja abis wisuda, di sini kamu nggak jalan sendirian. Ada circle, mentor, dan project bareng.",
+    "cta1": "Gabung, Gratis Kok",
+    "cta2": "Kenalan Dulu",
+    "proof": "Udah 1.200+ mahasiswa yang mulai duluan",
+    "chatTitle": "Circle Chat — Angkatan 2026"
+  },
+  "about": {
+    "eyebrow": "Tentang Kami",
+    "title": "Dari \"Ruang Kosong\" Jadi Ruang Tumbuh",
+    "p1": "Semuanya berawal dari obrolan angkringan jam 11 malam, isinya keresahan yang sama: \"Kita ini sebenernya bisa nggak sih, upgrade bareng-bareng, nggak usah sendiri-sendiri?\"",
+    "p2": "Awalnya cuma grup WhatsApp kecil isinya kita-kita yang capek liat linimasa penuh pencapaian orang, tapi diri sendiri berasa jalan di tempat. Nggak ada mentor, nggak ada arah, modal nekat doang.",
+    "p3": "RuangImprove hadir buat ngubah itu. Kami bangun ruang belajar yang isinya circle senasib, mentor yang mau turun tangan, dan project nyata biar CV kamu nggak kosong lagi pas semester akhir.",
+    "stat1": "1.200+",
+    "stat1Label": "Mahasiswa Gabung",
+    "stat2": "60+",
+    "stat2Label": "Kampus Se-Indonesia",
+    "stat3": "35",
+    "stat3Label": "Mentor Praktisi"
+  },
+  "programs": {
+    "eyebrow": "yang bisa kamu ikutin",
+    "title": "Naik Level, Bareng-Bareng",
+    "subtitle": "Nggak perlu langsung jago. Mulai aja dulu, sisanya jalan bareng circle.",
+    "card1Title": "Mentoring Squad",
+    "card1Desc": "8 minggu bareng mentor praktisi + 5-6 temen seperjuangan. Ada target jelas, bukan sekadar ngobrol tanpa arah.",
+    "card1Tag": "8 minggu · online",
+    "card2Title": "Sharing Session Mingguan",
+    "card2Desc": "Curhat sama kating yang udah lolos magang, kerja, atau lanjut S2 — no sugarcoating, real cerita jatuh bangunnya.",
+    "card2Tag": "tiap jumat malam",
+    "card3Title": "Project Kolaborasi",
+    "card3Desc": "Bikin project nyata bareng tim lintas kampus. Hasilnya bisa langsung nangkring di portofolio & CV kamu.",
+    "card3Tag": "tim 3-4 orang"
+  },
+  "cta": {
+    "eyebrow": "udah siap belum",
+    "title": "Udah Capek Jalan Sendirian?",
+    "subtitle": "Circle kamu udah nunggu di RuangImprove. Nggak perlu skill dulu, modal nekat sama niat aja buat mulai.",
+    "btn1": "Gabung Sekarang, Gratis",
+    "btn2": "Baca Cerita Kami"
+  },
+  "quiz": {
+    "eyebrow": "Quiz · 45 detik",
+    "introTitle": "Kamu Jenis Pendiri yang Mana?",
+    "introSub": "Jawab 7 pertanyaan singkat dan cari tahu apakah kamu seorang Hacker, Hipster, atau Hustler.",
+    "start": "Mulai",
+    "nameEmailTitle": "Siapa nama dan email kamu?",
+    "namePlaceholder": "Ketik nama kamu di sini",
+    "emailPlaceholder": "Ketik email kamu di sini",
+    "next": "Lanjut",
+    "back": "Kembali",
+    "resultTitle": "Hasil Kamu",
+    "resultYouAre": "Kamu adalah {title}!",
+    "resultHybrid": "Kamu tipe campuran: {types}",
+    "shareText": "Saya adalah {title}! Jenis pendiri apa kamu?",
+    "hacker": {
+      "title": "Hacker",
+      "desc": "Hacker mengembangkan teknologi baru untuk bisnis, membuat prototipe produk, dan bekerja pada pengembangan produk."
+    },
+    "hipster": {
+      "title": "Hipster",
+      "desc": "Hipster membentuk tampilan dan rasa produk — terobsesi dengan desain, pengalaman pengguna, dan cerita yang dibrandingkan."
+    },
+    "hustler": {
+      "title": "Hustler",
+      "desc": "Hustler mendorong bisnis maju — penjualan, deal, kemitraan, dan memastikan produk benar-benar sampai ke orang."
+    }
+  }
+}

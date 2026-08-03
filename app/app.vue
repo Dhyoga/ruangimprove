@@ -1,13 +1,7 @@
 <template>
   <div>
     <TheHeader />
-    <HeroSection />
-    <PainPointsSection />
-    <AboutSection />
-    <ProgramsSection />
-    <JourneySection />
-    <TestimonialSection />
-    <CtaSection />
+    <NuxtPage />
     <TheFooter />
   </div>
 </template>

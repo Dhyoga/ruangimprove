@@ -1,0 +1,84 @@
+{
+  "site": {
+    "title": "RuangImprove — A Space for You to Level Up",
+    "lang": "en"
+  },
+  "header": {
+    "logoAlt": "RuangImprove",
+    "program": "Programs",
+    "about": "About Us",
+    "journey": "Journey",
+    "joinCircle": "Join Circle",
+    "switchTo": "ID"
+  },
+  "hero": {
+    "eyebrow": "Student Coworking Space",
+    "title": "A Space for You to Level Up.",
+    "lede": "From being confused about which student org to join, to being nervous about the job market after graduation, you don't have to walk alone here. There are circles, mentors, and collaborative projects.",
+    "cta1": "Join, It's Free",
+    "cta2": "Get to Know Us",
+    "proof": "1,200+ students have already started",
+    "chatTitle": "Circle Chat — Class of 2026"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "From \"Empty Space\" to a \"Growth Space\"",
+    "p1": "It all started from a late-night street food chat at 11 PM, filled with the same worries: \"Can we actually upgrade together, instead of doing it alone?\"",
+    "p2": "At first it was just a small WhatsApp group of us who were tired of seeing timelines full of other people's achievements while feeling stuck ourselves. No mentors, no direction, just guts.",
+    "p3": "RuangImprove was created to change that. We build learning spaces filled with peers on the same journey, mentors willing to lend a hand, and real projects so your CV isn't empty anymore by your final semester.",
+    "stat1": "1,200+",
+    "stat1Label": "Students Joined",
+    "stat2": "60+",
+    "stat2Label": "Campuses Across Indonesia",
+    "stat3": "35",
+    "stat3Label": "Practitioner Mentors"
+  },
+  "programs": {
+    "eyebrow": "things you can join",
+    "title": "Level Up, Together",
+    "subtitle": "You don't need to be perfect. Just start, the rest comes with the circle.",
+    "card1Title": "Mentoring Squad",
+    "card1Desc": "8 weeks with practitioner mentors + 5-6 fellow fighters. Clear targets, not just aimless chatting.",
+    "card1Tag": "8 weeks · online",
+    "card2Title": "Weekly Sharing Session",
+    "card2Desc": "Chat with seniors who've made it through internships, jobs, or postgraduate studies — no sugarcoating, real stories of ups and downs.",
+    "card2Tag": "every Friday night",
+    "card3Title": "Collaborative Project",
+    "card3Desc": "Build real projects with cross-campus teams. The results can go straight into your portfolio and CV.",
+    "card3Tag": "teams of 3-4"
+  },
+  "cta": {
+    "eyebrow": "are you ready",
+    "title": "Tired of Walking Alone?",
+    "subtitle": "Your circle is waiting at RuangImprove. You don't need skills first, just guts and willingness to start.",
+    "btn1": "Join Now, It's Free",
+    "btn2": "Read Our Story"
+  },
+  "quiz": {
+    "eyebrow": "Quiz · 45 sec",
+    "introTitle": "What Type of Founder Are You?",
+    "introSub": "Answer 7 quick questions and find out if you're a Hacker, Hipster, or Hustler.",
+    "start": "Start",
+    "nameEmailTitle": "What's your name and email?",
+    "namePlaceholder": "Type your name here",
+    "emailPlaceholder": "Type your email here",
+    "next": "Next",
+    "back": "Back",
+    "resultTitle": "Your Result",
+    "resultYouAre": "You are {title}!",
+    "resultHybrid": "You're a hybrid: {types}",
+    "shareText": "I'm a {title}! What type of founder are you?",
+    "hacker": {
+      "title": "Hacker",
+      "desc": "The Hacker develops the new technology for the business, builds new product prototypes, and works on product development."
+    },
+    "hipster": {
+      "title": "Hipster",
+      "desc": "The Hipster shapes how the product looks and feels — obsessed with design, user experience, and the story the brand tells."
+    },
+    "hustler": {
+      "title": "Hustler",
+      "desc": "The Hustler drives the business forward — sales, deals, partnerships, and making sure the product actually reaches people."
+    }
+  }
+}
