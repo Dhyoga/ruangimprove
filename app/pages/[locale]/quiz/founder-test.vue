@@ -181,7 +181,8 @@ useHead({
 
 <style scoped>
 .quiz-page {
-  min-height: 100vh;
+  flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
