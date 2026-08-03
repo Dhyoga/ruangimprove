@@ -45,6 +45,7 @@ export default defineEventHandler(async (event) => {
 
     return { success: true, id: insertResult.rows[0].id }
   } catch (error) {
+    console.error('[quiz/submit] Failed to submit quiz:', error)
     return { success: false, message: 'Failed to submit quiz' }
   } finally {
     if (client) {

@@ -21,7 +21,8 @@ export default defineNitroPlugin(async () => {
       `)
 
       await client.end()
-    } catch {
+    } catch (error) {
+      console.warn('[db-init] Failed to auto-create quiz_submissions table:', error)
       // ignore startup migration errors; API route will retry on submit
     }
   }
