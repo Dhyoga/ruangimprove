@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <div class="logo">ruang<span class="dot">.</span><mark>improve</mark></div>
+      <img src="/RI1.png" alt="RuangImprove" class="logo-img" height="36" />
       <ul class="nav-links">
         <li><a href="#programs">Program</a></li>
         <li><a href="#about" class="active">Tentang Kami</a></li>

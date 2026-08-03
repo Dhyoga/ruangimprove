@@ -3,7 +3,7 @@
     <div class="wrap about-grid">
       <div class="about-visual reveal">
         <div class="desk-card">
-          <img src="/placeholder.webp" alt="" width="420" height="380" />
+          <img src="/RI1.png" alt="RuangImprove" width="420" height="380" />
         </div>
       </div>
 
